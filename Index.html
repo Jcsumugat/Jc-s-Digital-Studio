@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jc's Digital Studio</title>
+<meta name="description" content="Printable planners, trackers, and templates for students and developers.">
+<style>
+  :root {
+    --navy: #2e3478;
+    --navy-dark: #1f2459;
+    --accent: #d98a4a;
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #23263a;
+    --muted: #666b85;
+    --line: #e3e5ef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  a { color: var(--navy); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header { background: var(--navy); color: #fff; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; flex-wrap: wrap; gap: 10px; }
+  header .brand { font-weight: 700; font-size: 1.2rem; letter-spacing: .5px; }
+  header nav a { color: #fff; text-decoration: none; margin-left: 18px; font-size: .95rem; opacity: .9; }
+  header nav a:hover { opacity: 1; text-decoration: underline; }
+  .hero { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%); color: #fff; padding: 56px 0 64px; text-align: center; }
+  .hero h1 { margin: 0 0 12px; font-size: 2.2rem; line-height: 1.2; }
+  .hero p { margin: 0 auto 26px; max-width: 560px; font-size: 1.1rem; opacity: .92; }
+  .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 12px 26px; border-radius: 8px; font-weight: 600; }
+  .btn:hover { filter: brightness(1.08); }
+  .btn.outline { background: transparent; border: 2px solid var(--navy); color: var(--navy); }
+  section { padding: 48px 0; }
+  h2 { margin: 0 0 8px; font-size: 1.6rem; color: var(--navy); }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+  .featured { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 28px; align-items: center; }
+  .featured img { width: 100%; max-width: 320px; border-radius: 10px; border: 1px solid var(--line); display: block; margin: 0 auto; }
+  .badge { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; padding: 3px 10px; border-radius: 99px; background: #e4f3e6; color: #25693a; margin-bottom: 10px; }
+  .badge.dev { background: #fff1dc; color: #8a5a14; }
+  .featured h3 { margin: 0 0 8px; font-size: 1.5rem; color: var(--navy); }
+  .featured ul { padding-left: 20px; margin: 12px 0 18px; }
+  .price { font-size: 1.6rem; font-weight: 700; color: var(--navy); margin: 0 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; color: var(--navy); }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; counter-reset: step; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .step::before { counter-increment: step; content: counter(step); display: inline-flex; width: 30px; height: 30px; align-items: center; justify-content: center; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 700; margin-bottom: 10px; }
+  .step h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .step p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .alt { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  footer { background: var(--navy-dark); color: #d7daf0; padding: 32px 0; font-size: .92rem; }
+  footer a { color: #fff; }
+  footer .links a { margin-right: 16px; }
+  @media (max-width: 720px) {
+    .featured { grid-template-columns: 1fr; padding: 20px; }
+    .hero h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Jc's Digital Studio</div>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Printable planners and templates for students and developers</h1>
+    <p>Clear, ready-to-use files that help you plan your work, track your progress, and finish what you start.</p>
+    <a class="btn" href="#products">See products</a>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <h2>Products</h2>
+    <p class="sub">Instant download after purchase. Printable PDF files.</p>
+
+    <div class="featured">
+      <div>
+        <!-- Replace previews/capstone-cover.png with your exported cover image -->
+        <img src="previews/capstone-cover.png" alt="Capstone Project Tracker cover" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <span class="badge">Available</span>
+        <h3>Capstone Project Tracker</h3>
+        <p>Plan. Track. Defend. Keep your capstone or thesis on schedule from proposal to final defense.</p>
+        <ul>
+          <li>Project overview page</li>
+          <li>Chapter progress checklist</li>
+          <li>12-week defense countdown</li>
+          <li>Weekly task planner</li>
+          <li>Adviser meeting log</li>
+          <li>Revision tracker</li>
+          <li>Notes page</li>
+        </ul>
+        <p class="price">$9</p>
+        <!-- Replace # with your Lemon Squeezy product link after your store is activated -->
+        <a class="btn" href="#" id="buy-capstone">Buy now</a>
+        <p style="margin:12px 0 0;color:var(--muted);font-size:.9rem;">Printable PDF in A4 and Letter. For personal use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>More in development</h2>
+    <p class="sub">New products are added to this page when they are finished.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="badge dev">In development</span>
+        <h3>Thesis Manuscript Template</h3>
+        <p>Editable Word template for Chapters 1-3 with a table of contents and lists of tables and figures.</p>
+      </div>
+      <div class="card">
+        <span class="badge dev">In development</span>
+        <h3>Student Budget Planner</h3>
+        <p>Printable pages and a Google Sheets tracker for allowance, expenses, and savings goals.</p>
+      </div>
+      <div class="card">
+        <span class="badge dev">In development</span>
+        <h3>Study Planner and Habit Tracker</h3>
+        <p>Weekly study planner, exam countdown, and a 30-day habit tracker.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">Three simple steps.</p>
+    <div class="steps">
+      <div class="step"><h3>Choose a product</h3><p>Pick the planner or template that fits what you are working on.</p></div>
+      <div class="step"><h3>Check out securely</h3><p>Payment is handled by Lemon Squeezy, so your card details never reach me.</p></div>
+      <div class="step"><h3>Download and use</h3><p>You get a download link by email right after purchase. Print it or fill it in on a tablet.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2>Contact and support</h2>
+    <p class="sub">Questions, a missing file, or a problem opening a download? Send a message and I will reply within 48 hours.</p>
+    <!-- Replace with your real email address -->
+    <a class="btn outline" href="mailto:your-email@example.com">your-email@example.com</a>
+    <p style="margin:14px 0 0;color:var(--muted);">Based in the Philippines.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/Jcsumugat/Jc-s-Digital-Studio/blob/main/policies/refund-policy.md">Refund policy</a>
+      <a href="https://github.com/Jcsumugat/Jc-s-Digital-Studio/blob/main/policies/terms.md">Terms</a>
+      <a href="https://github.com/Jcsumugat/Jc-s-Digital-Studio/blob/main/policies/privacy.md">Privacy</a>
+      <a href="https://github.com/Jcsumugat/Jc-s-Digital-Studio">GitHub</a>
+    </div>
+    <p style="margin:14px 0 0;">&copy; 2026 Jc's Digital Studio. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
